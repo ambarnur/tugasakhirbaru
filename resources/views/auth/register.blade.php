@@ -7,7 +7,7 @@
         {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-            <label for="name" class="text-normal text-dark">Name</label>
+            <label for="name" class="text-normal text-dark">Nama</label>
             <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
             @if ($errors->has('name'))

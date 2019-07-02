@@ -14,7 +14,8 @@
 
 		@include('admin.users.form')
 
-		<button type="submit" class="btn btn-primary">{{ trans('app.edit_button') }}</button>
+		<button type="submit" class="btn btn-primary">{{ trans('Submit') }}</button>
+		<button type="submit" class="btn btn-danger">{{ trans('Cancel') }}</button>
 		
 	{!! Form::close() !!}
 	

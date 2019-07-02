@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar', 'bio', 'role'
+        'nama', 'email', 'password', 'avatar', 'bio', 'role','lembaga_id', 'nik', 'kontak', 'no_tps',
     ];
 
     /**
@@ -100,4 +100,9 @@ class User extends Authenticatable
             }
         });
     }
+
+   public function lembaga_survey(){
+        return $this->hasOne('App\Lembaga_survey', 'id', 'lembaga_id');
+   }
+
 }

@@ -5,37 +5,39 @@
 @endsection
 
 @section('content')
-
-    <div class="mB-20">
-        <a href="{{ route(ADMIN . '.users.create') }}" class="btn btn-info">
-            {{ trans('app.add_button') }}
+    <div class="bgc-white bd bdrs-3 pB-50">
+        <h4 class="pull-left mL-10 mT-5"> Tabel Users </h4>
+        <a href="{{ route(ADMIN . '.users.create') }}" class="btn btn-info pull-right mR-10 mT-5">
+            <i class="fa fa-plus"></i> {{ trans('app.add_button') }}
         </a>
     </div>
-
-
     <div class="bgc-white bd bdrs-3 p-20 mB-20">
         <table id="dataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Nama</th>
                     <th>Email</th>
+                    <th>Role</th>
+                    <th>Lembaga</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            
-            <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-            </tfoot>
-            
             <tbody>
                 @foreach ($items as $item)
                     <tr>
-                        <td><a href="{{ route(ADMIN . '.users.edit', $item->id) }}">{{ $item->name }}</a></td>
+                        <td><a href="{{ route(ADMIN . '.users.edit', $item->id) }}">{{ $item->nama }}</a></td>
                         <td>{{ $item->email }}</td>
+                        <td> 
+                            @if($item->role > 0)
+                                {{ $roles[$item->role] }}
+                            @endif
+                        </td>
+                        <td>
+                            @if(isset($item->lembaga_survey->nama))
+                                {{ $item->lembaga_survey->nama }}
+                            @endif
+                        </td>
+
                         <td>
                             <ul class="list-inline">
                                 <li class="list-inline-item">

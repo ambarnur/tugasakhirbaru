@@ -8,13 +8,26 @@ return [
     ],
 
     'role' => [
-        '0' => 'User',
         '10' => 'Admin',
+        '15' => 'Admin Lembaga Survey',
+        '20' => 'Saksi TPS'
+
     ],
     
     'status' => [
-        '1' => 'Active',
-        '0' => 'Inactive',
+        'aktif' => 'Aktif',
+        'non_aktif' => 'Tidak Aktif'
+    ],
+
+    'jenis' => [
+        '1' => 'Perorangan',
+        '2' => 'Lembaga'
+    ],
+
+    'jenis_pil' => [
+        'gubernur' => 'Gubernur',
+        'walikota' => 'Walikota',
+        'bupati' => 'Bupati'
     ],
 
     'avatar' => [
