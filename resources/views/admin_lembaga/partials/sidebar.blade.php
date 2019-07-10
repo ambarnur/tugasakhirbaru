@@ -29,7 +29,7 @@
 
 		<!-- ### $Sidebar Menu ### -->
 		<ul class="sidebar-menu scrollable pos-r">
-			@include('admin.partials.menu')
+			@include('admin_lembaga.partials.menu')
 		</ul>
 	</div>
 </div>

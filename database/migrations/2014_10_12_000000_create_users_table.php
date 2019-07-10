@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('avatar')->nullable();
             $table->integer('role')->default(0);
+            $table->integer('lembaga_id')->unsigned();
             $table->foreign('lembaga_id')->references('id')->on('lembaga_survey')
                     ->onDelete('cascade')
                     ->onUpdate('cascade');

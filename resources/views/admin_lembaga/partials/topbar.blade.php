@@ -6,12 +6,21 @@
                     <i class="ti-menu"></i>
                 </a>
             </li>
+            <li class="search-box">
+                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                    <i class="search-icon ti-search pdd-right-10"></i>
+                    <i class="search-icon-close ti-close pdd-right-10"></i>
+                </a>
+            </li>
+            <li class="search-input">
+                <input class="form-control" type="text" placeholder="Search...">
+            </li>
         </ul>
         <ul class="nav-right">
             <li class="dropdown">
                 <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
-                <div class="peer mR-10">
-                        <span class="fsz-sm c-grey-900">{{ Auth::user()->nama }}</span>
+                    <div class="peer mR-10">
+                        <span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span>
                     </div>
                 </a>
                 <ul class="dropdown-menu fsz-sm">

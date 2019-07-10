@@ -1,5 +1,6 @@
 <?php
 
+// Route::get('/', '\App\Http\Controllers\Auth\LoginController@login');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
@@ -38,9 +39,9 @@ Route::group(['prefix' => 'admin_lembaga', 'as' => 'admin_lembaga' . '.', 'middl
     Route::post('/generateSample', 'Admin_lembaga\TpsController@generateSample');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', 'LembagaController@index')->name('lembaga');
 Route::post('/', 'LembagaController@create')->name('lembaga');
