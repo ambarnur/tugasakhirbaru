@@ -20,7 +20,7 @@
             <li class="dropdown">
                 <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
                     <div class="peer mR-10">
-                        <span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span>
+                        <span class="fsz-sm c-grey-900">{{ Auth::user()->nama }}</span>
                     </div>
                 </a>
                 <ul class="dropdown-menu fsz-sm">

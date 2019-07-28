@@ -4,6 +4,11 @@
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
+Route::get('/registrasi_lembaga', 'Auth\RegisterLembagaController@index');
+Route::post('/registrasi_lembaga_proses', 'Auth\RegisterLembagaController@create')->name('registrasi_lembaga_proses');
+Route::get('/registrasi_akun/{id}', 'Auth\RegisterAkunController@index')->name('registrasi_akun');
+Route::post('/registrasi_akun_proses', 'Auth\RegisterLembagaController@create')->name('registrasi_akun_proses');
+
 /*
 |------------------------------------------------------------------------------------
 | Admin

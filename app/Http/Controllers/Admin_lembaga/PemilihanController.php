@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin_lembaga;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\User;
 use App\Pemilihan;
 use App\Provinsi;
 use App\Kabupaten;
+use Auth;
 
 
 class PemilihanController extends Controller
@@ -18,7 +20,8 @@ class PemilihanController extends Controller
      */
     public function index()
     {
-        $items = Pemilihan::with('provinsi','kabupaten')->get();
+        $items = Pemilihan::where('lembaga_id', Auth::user()->lembaga_id)->latest('updated_at')->with('provinsi','kabupaten')->get();
+        $roles = config('variables.role');
         return view('admin_lembaga.pemilihan.index', compact('items'));
     }
 

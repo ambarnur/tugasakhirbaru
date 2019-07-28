@@ -17,8 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-       // $user_id = Auth::user()->id;
-        $items = User::latest('updated_at')->with('lembaga_survey')->get();
+       $user_id = Auth::user()->lembaga_id;
+    //    dd($user_id);
+        $items = User::where('lembaga_id',$user_id)->where('role',20)->latest('updated_at')->with('lembaga_survey')->get();
         //dd($items);
         $roles = config('variables.role');
         return view('admin_lembaga.users.index', compact('items','roles'));

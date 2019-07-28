@@ -68,7 +68,7 @@ class User extends Authenticatable
     */
     public function setPasswordAttribute($value='')
     {
-        $this->attributes['password'] = md5($value);
+        $this->attributes['password'] = bcrypt($value);
     }
     
     public function getAvatarAttribute($value)

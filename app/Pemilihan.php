@@ -12,7 +12,7 @@ class Pemilihan extends Model
 
     protected $table = 'pemilihan';
     protected $fillable = [
-        'jenis','tahun', 'prov_id', 'kab_id'
+        'jenis','tahun', 'prov_id', 'kab_id','lembaga_id'
     ];
     protected $primaryKey = 'id';
 

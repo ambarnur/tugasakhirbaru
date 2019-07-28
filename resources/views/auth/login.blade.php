@@ -50,7 +50,7 @@
                 </a>
             </div>
             <div class="peer">
-                <a href="/register" class="btn btn-link">Create new account</a>
+                <a href="/registrasi_lembaga" class="btn btn-link">Create new account</a>
             </div>
         </div>
     </form>

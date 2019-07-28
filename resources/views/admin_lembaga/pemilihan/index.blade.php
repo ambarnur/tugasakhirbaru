@@ -39,7 +39,7 @@
                         <td>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <a href="{{ url('/admin_lembaga/pemilihan/calon', $item->id) }}" class="btn btn-primary btn-sm"><span class="fa fa-users"></span></a>
+                                    <a href="{{ url('/admin_lembaga/pemilihan/calon', $item->id) }}"  class="btn btn-primary btn-sm" title="{{ trans('Calon Pemilihan') }}"><span class="fa fa-users"></span></a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="{{ route('admin_lembaga' . '.pemilihan.edit', $item->id) }}" title="{{ trans('app.edit_title') }}" class="btn btn-primary btn-sm"><span class="ti-pencil"></span></a></li>
@@ -54,6 +54,12 @@
                                         <button class="btn btn-danger btn-sm" title="{{ trans('app.delete_title') }}"><i class="ti-trash"></i></button>
                                         
                                     {!! Form::close() !!}
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ url('/admin_lembaga/pemilihan/calon', $item->id) }}" class="btn btn-primary btn-sm" title="{{ trans('Saksi TPS') }}"><span class="fa fa-user"></span></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ url('/admin_lembaga/pemilihan/calon', $item->id) }}" class="btn btn-primary btn-sm" title="{{ trans('Data TPS') }}"><span class="fa fa-user"></span></a>
                                 </li>
                             </ul>
                         </td>
